@@ -1,0 +1,6 @@
+pine_sma(X,N,M) =>
+    alpha = M/N 
+	sum = 0.0
+	sum := na(sum[1]) ? sma(X, N) : (X * M+ nz(sum[1])*(N-M))/N
+// SMA(X,N,M)
+//如Y=(X*M+Y'*(N-M))/N
