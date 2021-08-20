@@ -1,0 +1,5 @@
+
+pine_dma(src, length) =>
+	alpha = length
+	sum = 0.0
+	sum := na(sum[1]) ? alpha * src + (1 - alpha) * nz(sum[1]) : alpha * src + (1 - alpha) * nz(sum[1])
